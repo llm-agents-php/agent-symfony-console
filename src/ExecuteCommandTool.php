@@ -41,7 +41,7 @@ final class ExecuteCommandTool extends Tool
             if ($option->value === '') {
                 $value = true;
             }
-            $arguments[$option->key] = $value;
+            $arguments[$option->key][] = $value;
         }
 
         $output = new BufferedOutput();
