@@ -14,6 +14,10 @@ Ever wished you could just tell your console what to do in plain English? Well, 
 casual requests and figures out which Symfony command to run. It's perfect for devs who are new to a project, can't
 remember exact command syntax, or just feeling a bit lazy (we've all been there).
 
+**Here's a short video to show you how it works:**
+
+[![Symfony Console Agent Demo](https://github.com/user-attachments/assets/e3a0efd6-486f-48d6-a90a-5595efa9fc45)](https://youtu.be/Tlu6PyL3Ur4)
+
 ### Requirements 📋
 
 - PHP 8.3 or higher (we're living in the future, baby!)
