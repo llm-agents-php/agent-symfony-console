@@ -41,7 +41,7 @@ final readonly class ArtisanCommandManager implements CommandManagerInterface
             }
         }
 
-        return $this->application->all();
+        return $commands;
     }
 
     public function call(\Stringable|string $command, array $parameters = [], ?OutputInterface $output = null): int
