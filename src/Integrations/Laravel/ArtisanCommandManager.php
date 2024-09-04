@@ -33,15 +33,16 @@ final readonly class ArtisanCommandManager implements CommandManagerInterface
     {
         $commands = $this->application->all();
 
+        $availableCommands = [];
         foreach ($this->enabledNamespaces as $namespace) {
             foreach ($commands as $name => $command) {
-                if (!\str_starts_with($name, $namespace)) {
-                    unset($commands[$name]);
+                if (\str_starts_with($name, $namespace)) {
+                    $availableCommands[$name] = $command;
                 }
             }
         }
 
-        return $commands;
+        return $availableCommands;
     }
 
     public function call(\Stringable|string $command, array $parameters = [], ?OutputInterface $output = null): int
