@@ -41,8 +41,8 @@ final class SymfonyConsoleBootloader extends Bootloader
             new ExecuteCommandTool($commandManager),
             new GetCommandDetailsTool($commandManager),
             new GetCommandsListTool($commandManager),
-            new ReadFileTool($dirs->get('app')),
-            new WriteFileTool($dirs->get('app')),
+            new ReadFileTool($dirs->get('root')),
+            new WriteFileTool($dirs->get('root')),
         );
     }
 }
