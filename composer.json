@@ -1,0 +1,31 @@
+{
+  "name": "llm-agents/agent-symfony-console",
+  "description": "Simple agent that can handle Symfony Console commands based on user input",
+  "license": "MIT",
+  "require": {
+    "php": "^8.3",
+    "llm-agents/agents": "^1.0",
+    "llm-agents/json-schema-mapper": "^1.0",
+    "symfony/console": "^6.0||^7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.3",
+    "spiral/boot": "^3.13",
+    "illuminate/support": "^11.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "LLM\\Agents\\Agent\\SymfonyConsole\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "LLM\\Agents\\Agent\\SymfonyConsole\\Tests\\": "tests/src"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
