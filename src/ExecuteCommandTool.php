@@ -36,7 +36,12 @@ final class ExecuteCommandTool extends Tool
         }
 
         foreach ($input->options as $option) {
-            $arguments[$option->key] = $option->value;
+            $value = $option->value;
+
+            if ($option->value === '') {
+                $value = true;
+            }
+            $arguments[$option->key] = $value;
         }
 
         $output = new BufferedOutput();
