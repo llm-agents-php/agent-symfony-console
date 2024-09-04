@@ -22,6 +22,7 @@ final class SymfonyConsoleBootloader extends Bootloader
     {
         return [
             SymfonyConsoleAgentFactory::class => static fn() => new SymfonyConsoleAgentFactory('Spiral'),
+            CommandManagerInterface::class => CommandManager::class,
         ];
     }
 
