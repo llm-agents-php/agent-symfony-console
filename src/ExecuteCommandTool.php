@@ -4,11 +4,14 @@ declare(strict_types=1);
 
 namespace LLM\Agents\Agent\SymfonyConsole;
 
-use LLM\Agents\Tool\Tool;
+use LLM\Agents\Tool\PhpTool;
 use LLM\Agents\Tool\ToolLanguage;
 use Symfony\Component\Console\Output\BufferedOutput;
 
-final class ExecuteCommandTool extends Tool
+/**
+ * @extends PhpTool<ExecuteCommandInput>
+ */
+final class ExecuteCommandTool extends PhpTool
 {
     public const NAME = 'execute_command';
 

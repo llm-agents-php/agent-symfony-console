@@ -4,12 +4,16 @@ declare(strict_types=1);
 
 namespace LLM\Agents\Agent\SymfonyConsole;
 
+use LLM\Agents\Tool\PhpTool;
 use LLM\Agents\Tool\Tool;
 use LLM\Agents\Tool\ToolLanguage;
 
+/**
+ * @extends PhpTool<WriteFileInput>
+ */
 final class WriteFileTool extends Tool
 {
-    public const NAME = 'write_file';
+    public const NAME = 'sc_write_file';
 
     public function __construct(
         private readonly string $basePath,

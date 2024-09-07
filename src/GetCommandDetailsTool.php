@@ -4,10 +4,13 @@ declare(strict_types=1);
 
 namespace LLM\Agents\Agent\SymfonyConsole;
 
-use LLM\Agents\Tool\Tool;
+use LLM\Agents\Tool\PhpTool;
 use LLM\Agents\Tool\ToolLanguage;
 
-final class GetCommandDetailsTool extends Tool
+/**
+ * @extends PhpTool<GetCommandDetailsInput>
+ */
+final class GetCommandDetailsTool extends PhpTool
 {
     public const NAME = 'get_command_details';
 

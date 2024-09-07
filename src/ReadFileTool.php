@@ -4,12 +4,15 @@ declare(strict_types=1);
 
 namespace LLM\Agents\Agent\SymfonyConsole;
 
-use LLM\Agents\Tool\Tool;
+use LLM\Agents\Tool\PhpTool;
 use LLM\Agents\Tool\ToolLanguage;
 
-final class ReadFileTool extends Tool
+/**
+ * @extends PhpTool<ReadFileInput>
+ */
+final class ReadFileTool extends PhpTool
 {
-    public const NAME = 'read_file';
+    public const NAME = 'sc_read_file';
 
     public function __construct(
         private readonly string $basePath,
